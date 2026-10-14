@@ -129,59 +129,65 @@
       SUIT_MARK[suit] + face + "</g>";
   }
 
+  function starField() {
+    return '<g fill="#7ea2e8">' +
+      '<circle cx="7" cy="8" r="0.7"></circle><circle cx="41" cy="11" r="0.55"></circle>' +
+      '<circle cx="44" cy="28" r="0.45"></circle><circle cx="6" cy="34" r="0.5"></circle>' +
+      '<circle cx="38" cy="6" r="0.4"></circle></g>' +
+      '<path d="M4 58q20-8 40 2" fill="none" stroke="#9eb6e6" stroke-width="0.6" opacity=".7"></path>';
+  }
+
   function drawJack() {
-    return '<ellipse cx="32" cy="80" rx="14" ry="3" fill="#000" opacity=".15"></ellipse>' +
-      '<path d="M26 58 L18 74" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>' +
-      '<path d="M40 58 L50 72" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>' +
-      '<path d="M14 74 h10" fill="none" stroke="#2a2118" stroke-width="4" stroke-linecap="round"></path>' +
-      '<path d="M44 72 h12" fill="none" stroke="#2a2118" stroke-width="4" stroke-linecap="round"></path>' +
-      '<path d="M22 42c-4 10-2 18 4 18h14c6 0 8-8 4-18-4 6-8 8-11 8s-7-2-11-8z" fill="currentColor"></path>' +
-      '<circle cx="32" cy="30" r="13" fill="#f6c7a4"></circle>' +
-      '<path d="M20 28c1-12 8-16 12-16s12 4 13 16c-4-8-8-10-13-10s-9 2-12 10z" fill="#3a2a22"></path>' +
-      '<path d="M20 26c0-12 6-16 12-16s12 4 12 16" fill="none" stroke="#2a2118" stroke-width="2.4"></path>' +
-      '<rect x="15" y="24" width="6" height="9" rx="2" fill="#2a2118"></rect>' +
-      '<rect x="43" y="24" width="6" height="9" rx="2" fill="#2a2118"></rect>' +
-      '<circle cx="27.5" cy="31" r="1.4" fill="#2a2118"></circle>' +
-      '<circle cx="36.5" cy="31" r="1.4" fill="#2a2118"></circle>' +
-      '<ellipse cx="24.5" cy="35" rx="2.1" ry="1.2" fill="#e8897a"></ellipse>' +
-      '<ellipse cx="39.5" cy="35" rx="2.1" ry="1.2" fill="#e8897a"></ellipse>' +
-      '<path d="M29 37.5q3 2.4 6 0" fill="none" stroke="#2a2118" stroke-width="1.2" stroke-linecap="round"></path>' +
-      '<path d="M48 16c1.2 3 .2 5.2-.4 6.2 1.2-.4 2.6-2.2.4-6.2z" fill="#9fd7f2"></path>';
+    return '<circle cx="10" cy="12" r="1" fill="#7ea2e8"></circle><circle cx="54" cy="18" r="0.8" fill="#7ea2e8"></circle>' +
+      '<rect x="14" y="50" width="8" height="20" rx="2" fill="#31425f"></rect>' +
+      '<rect x="42" y="50" width="8" height="20" rx="2" fill="#31425f"></rect>' +
+      '<path d="M16 70 q2 8 4 0M44 70 q2 8 4 0" fill="none" stroke="#ffb703" stroke-width="2" stroke-linecap="round"></path>' +
+      '<path d="M22 48 h20 l3 26 H19 Z" fill="currentColor"></path>' +
+      '<circle cx="32" cy="34" r="13" fill="#d5e4ff" stroke="#1c1917" stroke-width="1.6"></circle>' +
+      '<path d="M32 21 v-7" stroke="#1c1917" stroke-width="1.4"></path>' +
+      '<circle cx="32" cy="12" r="1.7" fill="#ff5d73"></circle>' +
+      '<ellipse cx="32" cy="35" rx="8" ry="7" fill="#142033"></ellipse>' +
+      '<ellipse cx="29" cy="33" rx="2" ry="1.1" fill="#b9e4ff"></ellipse>' +
+      '<rect x="24" y="46" width="16" height="4" rx="1" fill="#d7e6ff"></rect>';
   }
 
   function drawQueen() {
-    return '<ellipse cx="32" cy="80" rx="16" ry="3" fill="#000" opacity=".15"></ellipse>' +
-      '<ellipse cx="32" cy="62" rx="16" ry="13" fill="currentColor"></ellipse>' +
-      '<path d="M46 62c8 0 12-8 8-14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>' +
-      '<circle cx="32" cy="38" r="14" fill="currentColor"></circle>' +
-      '<path d="M18 34 L24 16 L30 32Z" fill="currentColor"></path>' +
-      '<path d="M46 34 L40 16 L34 32Z" fill="currentColor"></path>' +
-      '<path d="M22 30 L25 20 L28 30Z" fill="#f6c7a4"></path>' +
-      '<path d="M42 30 L39 20 L36 30Z" fill="#f6c7a4"></path>' +
-      '<path d="M24 38h7M34 38h7" fill="none" stroke="#fffaf3" stroke-width="2" stroke-linecap="round"></path>' +
-      '<path d="M32 42 l-2.2 2.4 h4.4z" fill="#f6c7a4"></path>' +
-      '<path d="M16 24 L21 12 L27 22 L32 8 L37 22 L43 12 L48 24Z" fill="#f0c14a" stroke="#8a5a12" stroke-width="0.8" stroke-linejoin="round"></path>';
+    return '<circle cx="8" cy="16" r="0.9" fill="#7ea2e8"></circle><circle cx="56" cy="14" r="0.7" fill="#7ea2e8"></circle>' +
+      '<path d="M24 30 L16 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>' +
+      '<path d="M40 30 L48 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>' +
+      '<circle cx="15" cy="7" r="2.3" fill="#6dffa8"></circle>' +
+      '<circle cx="49" cy="7" r="2.3" fill="#6dffa8"></circle>' +
+      '<path d="M18 24 A16 16 0 0 1 46 24" fill="none" stroke="#e0b56a" stroke-width="2"></path>' +
+      '<ellipse cx="32" cy="36" rx="12" ry="13" fill="#b6f3c8"></ellipse>' +
+      '<ellipse cx="27" cy="36" rx="2.6" ry="3.4" fill="#102018"></ellipse>' +
+      '<ellipse cx="37" cy="36" rx="2.6" ry="3.4" fill="#102018"></ellipse>' +
+      '<path d="M28 43 q4 3 8 0" fill="none" stroke="#102018" stroke-width="1.2" stroke-linecap="round"></path>' +
+      '<path d="M18 52 h28 l-4 24 H22 Z" fill="currentColor"></path>' +
+      '<circle cx="32" cy="64" r="3.2" fill="#e0b56a"></circle>';
   }
 
   function drawKing() {
-    return '<ellipse cx="32" cy="82" rx="18" ry="3" fill="#000" opacity=".15"></ellipse>' +
-      '<path d="M14 50c-2 20 6 30 18 30s20-10 18-30c-6 10-12 12-18 12s-12-2-18-12z" fill="currentColor"></path>' +
-      '<rect x="42" y="58" width="11" height="13" rx="2" fill="#fffaf2" stroke="#2a2118" stroke-width="1.2"></rect>' +
-      '<path d="M53 62h3a4 4 0 0 1 0 8h-3" fill="none" stroke="#2a2118" stroke-width="1.2"></path>' +
-      '<path d="M45 56q1.5-4 .2-6M49 56q1.5-4 .2-6" fill="none" stroke="#9ec9e0" stroke-width="1.2" stroke-linecap="round"></path>' +
-      '<circle cx="30" cy="36" r="13" fill="#f6c7a4"></circle>' +
-      '<path d="M20 44c2 10 8 12 12 12s10-2 12-12c-3 4-7 5-12 5s-9-1-12-5z" fill="#6b4a32"></path>' +
-      '<path d="M18 34c2-14 8-18 13-18s12 5 14 18c-4-8-8-11-14-11s-10 3-13 11z" fill="#3a2a22"></path>' +
-      '<path d="M14 24 L19 10 L26 20 L32 6 L38 20 L45 10 L50 24Z" fill="#f0c14a" stroke="#8a5a12" stroke-width="0.8" stroke-linejoin="round"></path>' +
-      '<path d="M24 36q3 2.2 6 0M34 36q3 2.2 6 0" fill="none" stroke="#2a2118" stroke-width="1.4" stroke-linecap="round"></path>' +
-      '<path d="M27 42q4 3 8 0" fill="none" stroke="#2a2118" stroke-width="1.2" stroke-linecap="round"></path>';
+    return '<circle cx="12" cy="10" r="0.9" fill="#7ea2e8"></circle><circle cx="52" cy="8" r="0.7" fill="#7ea2e8"></circle>' +
+      '<path d="M18 28 h28 l-3 8 H21 Z" fill="#142033"></path>' +
+      '<path d="M16 36 h32 v3.5 H16 Z" fill="#e0b56a"></path>' +
+      '<polygon points="32,14 36,26 28,26" fill="#e0b56a"></polygon>' +
+      '<circle cx="32" cy="46" r="11" fill="#f3c7a6"></circle>' +
+      '<circle cx="28" cy="46" r="1.3" fill="#1c1917"></circle>' +
+      '<circle cx="36" cy="46" r="1.3" fill="#1c1917"></circle>' +
+      '<path d="M28 51 q4 2.6 8 0" fill="none" stroke="#1c1917" stroke-width="1.2" stroke-linecap="round"></path>' +
+      '<path d="M16 58 h32 l-3 22 H19 Z" fill="currentColor"></path>' +
+      '<rect x="14" y="58" width="8" height="4" fill="#e0b56a"></rect>' +
+      '<rect x="42" y="58" width="8" height="4" fill="#e0b56a"></rect>' +
+      '<path d="M50 34 l5-12 5 12 z" fill="#d5e4ff" stroke="#142033" stroke-width="1"></path>' +
+      '<rect x="52" y="34" width="6" height="14" rx="1" fill="#31425f"></rect>' +
+      '<path d="M53 48 q2 6 4 0" fill="none" stroke="#ffb703" stroke-width="1.4" stroke-linecap="round"></path>';
   }
 
   function pipField(suit, rank) {
     var count = rank + 1;
     var spots = PIP_LAYOUT[count];
     var size = count >= 10 ? 8 : count >= 7 ? 9.5 : 12;
-    var body = "";
+    var body = starField();
     for (var i = 0; i < spots.length; i++) {
       body += suitIcon(suit, spots[i][0], spots[i][1], size, spots[i][2] === 1, false);
     }
@@ -189,7 +195,9 @@
   }
 
   function aceArt(suit) {
-    return artSvg("0 0 48 64", suitIcon(suit, 24, 34, 34, false, true), "sc-face-art");
+    var orbit = '<ellipse cx="24" cy="34" rx="18" ry="7" fill="none" stroke="#7ea2e8" stroke-width="1.3" transform="rotate(-18 24 34)"></ellipse>' +
+      '<circle cx="40" cy="30" r="1.3" fill="#e0b56a"></circle>' + starField();
+    return artSvg("0 0 48 64", orbit + suitIcon(suit, 24, 34, 30, false, true), "sc-face-art");
   }
 
   function courtArt(rank, suit) {
@@ -206,22 +214,20 @@
 
   function backArt() {
     return artSvg("0 0 80 112",
-      '<rect width="80" height="112" rx="8" fill="#143e6b"></rect>' +
-      '<path d="M-4 20 L24 -4 M-4 44 L48 -4 M-4 70 L70 -4 M8 116 L84 48 M32 116 L84 72" fill="none" stroke="#1c548a" stroke-width="6"></path>' +
-      '<rect x="6" y="6" width="68" height="100" rx="6" fill="none" stroke="#f0d48a" stroke-width="2"></rect>' +
-      '<rect x="10" y="10" width="60" height="92" rx="4" fill="none" stroke="#8fb4d8" stroke-width="1"></rect>' +
-      '<circle cx="40" cy="46" r="16" fill="#f6c7a4"></circle>' +
-      '<path d="M26 44c1-14 9-18 14-18s14 5 15 18c-4-9-8-12-15-12s-11 3-14 12z" fill="#3a2a22"></path>' +
-      '<path d="M26 42c0-16 7-20 14-20s14 5 14 20" fill="none" stroke="#2a2118" stroke-width="2.5"></path>' +
-      '<rect x="20" y="40" width="7" height="11" rx="2" fill="#f0d48a"></rect>' +
-      '<rect x="53" y="40" width="7" height="11" rx="2" fill="#f0d48a"></rect>' +
-      '<path d="M33 48q4 2.4 7 0M44 48q4 2.4 7 0" fill="none" stroke="#2a2118" stroke-width="1.5" stroke-linecap="round"></path>' +
-      '<path d="M38 54q4 3 8 0" fill="none" stroke="#2a2118" stroke-width="1.3" stroke-linecap="round"></path>' +
-      '<ellipse cx="32" cy="52" rx="2.2" ry="1.3" fill="#e8897a"></ellipse>' +
-      '<ellipse cx="50" cy="52" rx="2.2" ry="1.3" fill="#e8897a"></ellipse>' +
-      '<path d="M24 66c-2 16 6 22 16 22s18-6 16-22c-6 8-10 10-16 10s-10-2-16-10z" fill="#1f8a56"></path>' +
-      '<path d="M40 80c0 0-4.2-2.6-4.2-5.2 0-2.1 1.7-3.4 3.3-2.1.8.6 1.4 1.3 1.9 2.1.5-.8 1.1-1.5 1.9-2.1 1.6-1.3 3.3 0 3.3 2.1 0 2.6-4.2 5.2-6.2 5.2z" fill="#d3122a"></path>' +
-      '<text x="40" y="102" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#f0d48a">QUIET</text>',
+      '<rect width="80" height="112" rx="8" fill="#07111f"></rect>' +
+      '<g fill="#d7e6ff">' +
+      '<circle cx="14" cy="18" r="0.7"></circle><circle cx="26" cy="12" r="0.5"></circle>' +
+      '<circle cx="62" cy="22" r="0.8"></circle><circle cx="48" cy="16" r="0.45"></circle>' +
+      '<circle cx="18" cy="92" r="0.6"></circle><circle cx="66" cy="86" r="0.5"></circle>' +
+      '<circle cx="12" cy="48" r="0.45"></circle><circle cx="70" cy="54" r="0.55"></circle>' +
+      "</g>" +
+      '<path d="M16 28 L24 22 L34 26 L46 18 L58 24" fill="none" stroke="#7ea2e8" stroke-width="0.8"></path>' +
+      '<ellipse cx="40" cy="58" rx="14" ry="14" fill="#e0b56a"></ellipse>' +
+      '<ellipse cx="40" cy="58" rx="26" ry="7" fill="none" stroke="#9fd4ff" stroke-width="2" transform="rotate(-16 40 58)"></ellipse>' +
+      '<path d="M36 78 l4-12 4 12 z" fill="#d5e4ff"></path>' +
+      '<rect x="37" y="78" width="6" height="12" rx="1" fill="#31425f"></rect>' +
+      '<path d="M38 90 q2 5 4 0" fill="none" stroke="#ffb703" stroke-width="1.3" stroke-linecap="round"></path>' +
+      '<rect x="6" y="6" width="68" height="100" rx="6" fill="none" stroke="#7ea2e8" stroke-width="1.6"></rect>',
       "sc-back-art");
   }
 
@@ -333,9 +339,12 @@
     ".sc-root{height:100%;min-height:100%;display:flex;flex-direction:column;overflow:hidden;",
     "background:#24160f;color:#f6f1e6;font-family:Georgia,'Times New Roman',serif;",
     "container-type:inline-size;user-select:none;-webkit-user-select:none;position:relative}",
-    ".sc-root{--card-w:74px;--card-h:104px;--gap:10px;--fan:26px;--up-gap:34px;--down-gap:16px}",
-    ".sc-root{--gap:clamp(6px,1cqw,12px);--card-w:clamp(42px,10.5cqw,86px);--card-h:calc(var(--card-w)*1.42);",
-    "--fan:calc(var(--card-w)*0.34);--up-gap:calc(var(--card-h)*0.32);--down-gap:calc(var(--card-h)*0.16)}",
+    ".sc-root{--card-w:64px;--card-h:91px;--gap:8px;--row-gap:8px;--fan:20px;--up-gap:28px;--down-gap:14px}",
+    ".is-compact .sc-mascot,.is-compact .sc-rule,.is-compact .sc-keys{display:none}",
+    ".is-compact .sc-bar{padding:4px 8px;gap:6px}",
+    ".is-compact .sc-title{font-size:16px}",
+    ".is-compact .sc-foot{padding:4px 8px}",
+    ".is-compact .sc-felt{margin:4px;padding:6px}",
     ".sc-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;",
     "padding:10px 14px;background:linear-gradient(#6b4423,#3e2716);border-bottom:4px solid #e0b56a;",
     "box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}",
@@ -363,7 +372,7 @@
     "@keyframes sc-dash{to{stroke-dashoffset:-120}}",
     ".sc-row{position:relative;z-index:1;display:grid;grid-template-columns:repeat(7,var(--card-w));column-gap:var(--gap);",
     "justify-content:center;align-items:start}",
-    ".sc-tab-row{margin-top:16px}",
+    ".sc-tab-row{margin-top:var(--row-gap)}",
     ".sc-pile{position:relative;min-height:var(--card-h);min-width:var(--card-w)}",
     ".sc-pile[data-zone=waste]{grid-column:span 2}",
     ".sc-fan{display:flex;align-items:flex-start}",
@@ -375,8 +384,8 @@
     ".sc-recycle{color:#fff6e4;border-style:solid;border-color:rgba(255,246,228,.75);background:rgba(0,0,0,.18)}",
     ".sc-recycle svg{width:64%}",
     ".sc-card{width:var(--card-w);height:var(--card-h);box-sizing:border-box;border-radius:9px;position:relative;overflow:hidden;",
-    "background:radial-gradient(circle at 18% 0%,#fff 0%,transparent 42%),linear-gradient(#fffdf8,#f6ead4);",
-    "border:1px solid #b08968;color:#1a1714;",
+    "background:radial-gradient(circle at 16% 0%,#fff 0%,transparent 36%),radial-gradient(circle at 86% 88%,rgba(126,162,232,.28),transparent 34%),linear-gradient(#f7f9ff,#e4ecf8);",
+    "border:1px solid #5c739b;color:#1c1917;",
     "box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 2px 4px rgba(0,0,0,.28);",
     "font-family:'Segoe UI Symbol','Segoe UI','DejaVu Sans','Noto Sans Symbols 2',sans-serif;flex:none}",
     ".sc-card:not(.sc-back)::after{content:'';position:absolute;inset:3px;border:1.5px solid currentColor;border-radius:6px;",
@@ -389,7 +398,7 @@
     ".sc-back-art{position:absolute;inset:0;width:100%;height:100%;z-index:1}",
     ".sc-corner{position:absolute;top:2px;left:4px;z-index:4;display:flex;flex-direction:column;align-items:center;",
     "font-weight:800;line-height:.9;font-size:calc(var(--card-w)*.2);font-style:normal;",
-    "background:#fffaf2;box-shadow:0 0 0 2px #fffaf2;border-radius:2px;padding:0 1px}",
+    "background:#f7f9ff;box-shadow:0 0 0 2px #f7f9ff;border-radius:2px;padding:0 1px}",
     ".sc-corner b{font-weight:800}",
     ".sc-corner i{font-style:normal;font-size:.95em}",
     ".sc-br{top:auto;left:auto;right:4px;bottom:2px;transform:rotate(180deg)}",
@@ -416,7 +425,17 @@
     ".sc-banner-card h2{margin:4px 0 6px;font-size:clamp(26px,4cqw,42px);color:#146b45}",
     ".sc-banner-card p{margin:0;font:700 15px/1.4 'Segoe UI',system-ui,sans-serif}",
     ".sc-cheer{width:min(200px,46vw);height:auto;margin:0 auto}",
-    ".sc-ghost{position:fixed;z-index:80;width:var(--card-w);pointer-events:none;filter:drop-shadow(0 12px 10px rgba(0,0,0,.45))}",
+    ".sc-ghost{position:fixed;z-index:80;width:var(--card-w);margin:0;pointer-events:none;filter:drop-shadow(0 12px 10px rgba(0,0,0,.45))}",
+    ".sc-credits{position:absolute;inset:0;z-index:90;display:grid;place-items:center;background:rgba(8,16,28,.62);padding:16px}",
+    ".sc-credits[hidden]{display:none !important}",
+    ".sc-credits-card{width:min(28rem,100%);background:#f7f9ff;color:#1c1917;border:4px solid #7ea2e8;border-radius:18px;",
+    "padding:16px 18px 18px;text-align:center;box-shadow:0 14px 0 rgba(0,0,0,.28)}",
+    ".sc-credits-card h2{margin:0 0 10px;font-size:clamp(22px,4cqw,32px);color:#142033}",
+    ".sc-credits-name{margin:0 0 8px;font:700 1.15rem/1.3 Georgia,'Times New Roman',serif}",
+    ".sc-credits-card p{margin:0 0 8px;font:600 15px/1.45 'Segoe UI',system-ui,sans-serif}",
+    ".sc-credits-card a{color:#1d4ed8}",
+    ".sc-credits-card button{margin-top:6px;font:700 14px/1 'Segoe UI',system-ui,sans-serif;color:#fff8ea;background:#146b45;",
+    "border:2px solid #e0b56a;border-radius:999px;padding:7px 14px;cursor:pointer}",
     ".sc-card{touch-action:none}",
     "@media (prefers-reduced-motion:reduce){.sc-pulse polyline{animation:none}}"
   ].join("");
@@ -454,6 +473,7 @@
           '<button type="button" data-control="hint" tabindex="-1">Hint</button>' +
           '<button type="button" data-control="new" tabindex="-1">New</button>' +
           '<button type="button" data-control="restart" tabindex="-1">Restart</button>' +
+          '<button type="button" data-control="credits" tabindex="-1">Credits</button>' +
         "</div></header>" +
       '<div class="sc-felt"><div class="sc-doodles" aria-hidden="true">' + pulseSVG() + catSVG() + mugSVG() + '</div>' +
       '<div class="sc-row" data-row="top"></div><div class="sc-row sc-tab-row" data-row="tab"></div>' +
@@ -461,7 +481,17 @@
       '<footer class="sc-foot"><p class="sc-msg" data-msg aria-live="polite"></p>' +
       '<p class="sc-where" data-where></p>' +
       '<p class="sc-keys"><kbd>Arrows</kbd> move between piles and cards <kbd>Enter</kbd> or <kbd>Space</kbd> select, drop, or flip ' +
-      "<kbd>D</kbd> draw <kbd>U</kbd> undo <kbd>H</kbd> hint <kbd>N</kbd> new <kbd>R</kbd> restart <kbd>Esc</kbd> quit</p></footer>";
+      "<kbd>D</kbd> draw <kbd>U</kbd> undo <kbd>H</kbd> hint <kbd>N</kbd> new <kbd>R</kbd> restart <kbd>Esc</kbd> quit</p></footer>" +
+      '<div class="sc-credits" data-credits hidden>' +
+        '<div class="sc-credits-card" role="dialog" aria-modal="true" aria-labelledby="sc-credits-title">' +
+          '<h2 id="sc-credits-title">Credits</h2>' +
+          '<p class="sc-credits-name">Travis MacDonald</p>' +
+          '<p><a href="https://travisjmac.com">https://travisjmac.com</a></p>' +
+          '<p><a href="mailto:travis@travisjmac.com">travis@travisjmac.com</a></p>' +
+          "<p>Hope you like these. They were fun to make.</p>" +
+          "<p>Use that urge to create. Building something you care about lasts longer than tearing something down. Enjoy these, then go make your own.</p>" +
+          '<button type="button" data-control="credits-close">Close</button>' +
+        "</div></div>";
 
     var topRow = root.querySelector("[data-row=top]");
     var tabRow = root.querySelector("[data-row=tab]");
@@ -475,6 +505,7 @@
     var hintBtn = root.querySelector('[data-control="hint"]');
     var newBtn = root.querySelector('[data-control="new"]');
     var restartBtn = root.querySelector('[data-control="restart"]');
+    var creditsEl = root.querySelector("[data-credits]");
 
     var seed = 1;
     var stock = [];
@@ -495,10 +526,120 @@
     var drag = null;
     var ghost = null;
     var lastClick = null;
+    var creditsOpen = false;
+    var audioCtx = null;
+    var fitObserver = null;
     var cursor = { row: "top", top: 0, tab: 0, index: -1, backTab: 1 };
 
     function setStatus(text) {
       message = text;
+    }
+
+    function audio() {
+      var Ctx = globalThis.AudioContext || globalThis.webkitAudioContext;
+      if (!Ctx) return null;
+      if (!audioCtx) {
+        try { audioCtx = new Ctx(); } catch (err) { return null; }
+      }
+      if (audioCtx.state === "suspended") {
+        try { audioCtx.resume(); } catch (err2) { /* ignore */ }
+      }
+      return audioCtx;
+    }
+
+    function tone(freq, freq2, dur, vol, type) {
+      var ctx = audio();
+      if (!ctx) return;
+      var t = ctx.currentTime;
+      var osc = ctx.createOscillator();
+      var gain = ctx.createGain();
+      osc.type = type || "sine";
+      osc.frequency.setValueAtTime(freq, t);
+      if (freq2) osc.frequency.exponentialRampToValueAtTime(Math.max(40, freq2), t + dur);
+      gain.gain.setValueAtTime(0.0001, t);
+      gain.gain.exponentialRampToValueAtTime(vol, t + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(t);
+      osc.stop(t + dur + 0.02);
+    }
+
+    function rustle(dur, vol, freq) {
+      var ctx = audio();
+      if (!ctx) return;
+      var n = Math.max(1, Math.floor(ctx.sampleRate * dur));
+      var buf = ctx.createBuffer(1, n, ctx.sampleRate);
+      var data = buf.getChannelData(0);
+      for (var i = 0; i < n; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / n);
+      var src = ctx.createBufferSource();
+      src.buffer = buf;
+      var filter = ctx.createBiquadFilter();
+      filter.type = "bandpass";
+      filter.frequency.value = freq;
+      var gain = ctx.createGain();
+      gain.gain.value = vol;
+      src.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+      src.start();
+    }
+
+    function playClick() {
+      tone(740, 420, 0.045, 0.03, "square");
+    }
+
+    function playShuffle() {
+      rustle(0.16, 0.035, 1600);
+      tone(240, 110, 0.14, 0.03, "triangle");
+    }
+
+    function playDraw() {
+      rustle(0.07, 0.04, 2200);
+      tone(480, 720, 0.08, 0.035, "sine");
+    }
+
+    function playMove() {
+      tone(392, 523, 0.11, 0.04, "sine");
+    }
+
+    function fitCards() {
+      if (dead) return;
+      root.classList.toggle("is-compact", root.clientHeight < 560 || root.clientWidth < 780);
+      var felt = root.querySelector(".sc-felt");
+      if (!felt) return;
+      var style = window.getComputedStyle(felt);
+      var padX = (parseFloat(style.paddingLeft) || 0) + (parseFloat(style.paddingRight) || 0);
+      var padY = (parseFloat(style.paddingTop) || 0) + (parseFloat(style.paddingBottom) || 0);
+      var availW = felt.clientWidth - padX;
+      var availH = felt.clientHeight - padY;
+      if (!(availW > 30) || !(availH > 30)) return;
+      var gap = Math.max(3, Math.min(10, availW * 0.012));
+      var rowGap = Math.max(4, Math.min(12, availH * 0.018));
+      var wFromW = (availW - 6 * gap) / 7;
+      var wFromH = (availH - rowGap - 4) / (1.42 * 2.96);
+      var w = Math.min(wFromW, wFromH, 96);
+      if (!(w > 4)) w = 4;
+      var cardH = w * 1.42;
+      root.style.setProperty("--card-w", w.toFixed(2) + "px");
+      root.style.setProperty("--card-h", cardH.toFixed(2) + "px");
+      root.style.setProperty("--gap", gap.toFixed(2) + "px");
+      root.style.setProperty("--row-gap", rowGap.toFixed(2) + "px");
+      root.style.setProperty("--fan", (w * 0.32).toFixed(2) + "px");
+      root.style.setProperty("--up-gap", (cardH * 0.3).toFixed(2) + "px");
+      root.style.setProperty("--down-gap", (cardH * 0.16).toFixed(2) + "px");
+    }
+
+    function openCredits() {
+      creditsOpen = true;
+      creditsEl.hidden = false;
+      playClick();
+    }
+
+    function closeCredits() {
+      if (!creditsOpen) return;
+      creditsOpen = false;
+      creditsEl.hidden = true;
     }
 
     function homeCount() {
@@ -705,6 +846,7 @@
       var extra = moving.length > 1 ? " and " + (moving.length - 1) + " on it" : "";
       var destName = destZone === "foundation" ? "a foundation" : "tableau " + (destPile + 1);
       setStatus("Moved " + lead.label + lead.symbol + extra + " to " + destName + ".");
+      playMove();
       refreshWin();
       if (won) setStatus("You win. All 52 cards are on the foundations.");
       render();
@@ -736,6 +878,7 @@
         cursor.top = 0;
         cursor.index = -1;
         setStatus("Recycled the waste into the stock.");
+        playShuffle();
         render();
         return;
       }
@@ -756,6 +899,7 @@
       cursor.top = 1;
       cursor.index = waste.length - 1;
       setStatus(n === 1 ? "Drew " + names[0] + "." : "Drew " + names.join(", ") + ".");
+      playDraw();
       render();
     }
 
@@ -813,6 +957,7 @@
       deal(randomSeed());
       resetCursor();
       setStatus("New game. Draw three from the stock.");
+      playShuffle();
       render();
     }
 
@@ -827,6 +972,7 @@
       deal(seed);
       resetCursor();
       setStatus("Restarted the same deal.");
+      playShuffle();
       render();
     }
 
@@ -1011,6 +1157,21 @@
       render();
     }
 
+    function trySendKing(zone, pile, index) {
+      if (!canPick(zone, pile, index)) return false;
+      var src = { zone: zone, pile: pile, index: index };
+      var cards = peek(src);
+      if (!cards || cards[0].rank !== 12) return false;
+      for (var i = 0; i < tableau.length; i++) {
+        if (zone === "tableau" && pile === i) continue;
+        if (!tableau[i].length) {
+          tryCommit(src, "tableau", i);
+          return true;
+        }
+      }
+      return false;
+    }
+
     function trySendHome(zone, pile, index) {
       if (!canPick(zone, pile, index)) return false;
       var src = { zone: zone, pile: pile, index: index };
@@ -1088,6 +1249,10 @@
       };
       if (!handled[key]) return;
       e.preventDefault();
+      if (creditsOpen) {
+        if (key === "escape") closeCredits();
+        return;
+      }
       if (stopped) return;
       if (e.repeat && key !== "arrowleft" && key !== "arrowright" && key !== "arrowup" && key !== "arrowdown") return;
       if (key === "escape") return quit();
@@ -1307,26 +1472,52 @@
       return !illegalReason(cards, destZone, destPile);
     }
 
-    function pileUnder(x, y) {
-      if (!document.elementFromPoint) return null;
-      var hidden = false;
-      if (ghost) {
-        ghost.style.visibility = "hidden";
-        hidden = true;
-      }
-      var hit = document.elementFromPoint(x, y);
-      if (hidden) ghost.style.visibility = "";
-      var pileEl = hit && hit.closest ? hit.closest("[data-zone]") : null;
-      if (!pileEl || !root.contains(pileEl)) return null;
-      return pileEl;
+    function overlapArea(a, b) {
+      var w = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+      var h = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+      if (w <= 0 || h <= 0) return 0;
+      return w * h;
     }
 
-    function markLegalDrop(x, y) {
+    function leadRect() {
+      if (!ghost) return null;
+      var card = ghost.querySelector(".sc-card");
+      return card ? card.getBoundingClientRect() : ghost.getBoundingClientRect();
+    }
+
+    function bestDrop() {
+      var card = leadRect();
+      if (!card || !drag) return null;
+      var area = card.width * card.height;
+      if (!(area > 0)) return null;
+      var piles = root.querySelectorAll(".sc-pile");
+      var best = null;
+      var bestRatio = 0.4;
+      for (var i = 0; i < piles.length; i++) {
+        var pileEl = piles[i];
+        var zone = pileEl.dataset.zone;
+        var pile = Number(pileEl.dataset.pile || 0);
+        if (!canDropOn(drag, zone, pile)) continue;
+        var ratio = overlapArea(card, pileEl.getBoundingClientRect()) / area;
+        if (ratio > bestRatio) {
+          bestRatio = ratio;
+          best = pileEl;
+        }
+      }
+      return best;
+    }
+
+    function markLegalDrop() {
       clearDropMarks();
-      if (!drag) return;
-      var pileEl = pileUnder(x, y);
-      if (!pileEl) return;
-      if (canDropOn(drag, pileEl.dataset.zone, Number(pileEl.dataset.pile || 0))) pileEl.classList.add("is-drop");
+      var pileEl = bestDrop();
+      if (pileEl) pileEl.classList.add("is-drop");
+    }
+
+    function placeGhost(clientX, clientY) {
+      if (!ghost || !drag) return;
+      var origin = root.getBoundingClientRect();
+      ghost.style.left = (clientX - origin.left - drag.grabDX) + "px";
+      ghost.style.top = (clientY - origin.top - drag.grabDY) + "px";
     }
 
     function pointCursor(zone, pile, index) {
@@ -1354,7 +1545,7 @@
     }
 
     function onPointerDown(e) {
-      if (dead || stopped || won) return;
+      if (dead || stopped || won || creditsOpen) return;
       if (e.button !== undefined && e.button !== 0) return;
       if (e.target.closest && e.target.closest("[data-control]")) return;
       var pileEl = e.target.closest ? e.target.closest("[data-zone]") : null;
@@ -1363,11 +1554,14 @@
       var pile = Number(pileEl.dataset.pile || 0);
       var cardEl = e.target.closest("[data-card]");
       var index = cardEl ? Number(cardEl.dataset.index) : -1;
+      var cardRect = cardEl ? cardEl.getBoundingClientRect() : null;
       pointCursor(zone, pile, index);
       drag = {
         pointerId: e.pointerId,
         x: e.clientX,
         y: e.clientY,
+        grabDX: cardRect ? e.clientX - cardRect.left : 0,
+        grabDY: cardRect ? e.clientY - cardRect.top : 0,
         zone: zone,
         pile: pile,
         index: index,
@@ -1411,12 +1605,9 @@
         ghost.innerHTML = gh;
         root.appendChild(ghost);
       }
-      if (ghost) {
-        ghost.style.left = (e.clientX + 10) + "px";
-        ghost.style.top = (e.clientY + 8) + "px";
-      }
+      placeGhost(e.clientX, e.clientY);
       if (e.cancelable) e.preventDefault();
-      markLegalDrop(e.clientX, e.clientY);
+      markLegalDrop();
     }
 
     function onPointerUp(e) {
@@ -1424,6 +1615,7 @@
       var info = drag;
       var moved = info.moved;
       var shifted = info.shifted;
+      var pileEl = moved ? bestDrop() : null;
       endDrag();
       if (info.zone === "stock") {
         if (!shifted) drawOrRecycle();
@@ -1432,7 +1624,6 @@
       }
       if (moved) {
         var src = { zone: info.zone, pile: info.pile, index: info.index };
-        var pileEl = pileUnder(e.clientX, e.clientY);
         var zone = pileEl ? pileEl.dataset.zone : "";
         var pile = pileEl ? Number(pileEl.dataset.pile || 0) : -1;
         if (pileEl && canDropOn(src, zone, pile)) {
@@ -1451,19 +1642,28 @@
       var now = Date.now();
       var dbl = lastClick && lastClick.zone === info.zone && lastClick.pile === info.pile && lastClick.index === info.index && now - lastClick.t < 450;
       lastClick = { zone: info.zone, pile: info.pile, index: info.index, t: now };
-      if (dbl && trySendHome(info.zone, info.pile, info.index)) return;
+      if (dbl && (trySendKing(info.zone, info.pile, info.index) || trySendHome(info.zone, info.pile, info.index))) return;
+      playClick();
       activateAt(info.zone, info.pile, info.index);
     }
 
     function onControlClick(e) {
+      if (e.target === creditsEl) {
+        closeCredits();
+        return;
+      }
       var btn = e.target.closest ? e.target.closest("[data-control]") : null;
       if (!btn || btn.disabled) return;
       var action = btn.dataset.control;
-      if (action === "draw") drawOrRecycle();
-      else if (action === "undo") undo();
+      if (action === "credits") return openCredits();
+      if (action === "credits-close") return closeCredits();
+      if (creditsOpen) return;
+      if (action === "draw") return drawOrRecycle();
+      if (action === "new") return newGame();
+      if (action === "restart") return restart();
+      playClick();
+      if (action === "undo") undo();
       else if (action === "hint") showHint();
-      else if (action === "new") newGame();
-      else if (action === "restart") restart();
     }
 
     function onMouseDown(e) {
@@ -1478,6 +1678,13 @@
     deal(randomSeed());
     setStatus("Draw three from the stock. Build down in alternating colors.");
     render();
+    fitCards();
+    if (typeof ResizeObserver === "function") {
+      fitObserver = new ResizeObserver(fitCards);
+      fitObserver.observe(root);
+    } else {
+      window.addEventListener("resize", fitCards);
+    }
     if (typeof root.focus === "function") {
       try { root.focus({ preventScroll: true }); } catch (err) { root.focus(); }
     }
@@ -1487,6 +1694,12 @@
         if (dead) return;
         dead = true;
         endDrag();
+        closeCredits();
+        if (fitObserver) fitObserver.disconnect();
+        window.removeEventListener("resize", fitCards);
+        if (audioCtx && audioCtx.close) {
+          try { audioCtx.close(); } catch (err) { /* ignore */ }
+        }
         document.removeEventListener("keydown", onKey);
         root.removeEventListener("pointerdown", onPointerDown);
         root.removeEventListener("click", onControlClick);
