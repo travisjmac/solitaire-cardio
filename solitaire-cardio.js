@@ -2,6 +2,8 @@
 (function () {
   "use strict";
 
+  var themeBase = new URL('./themes/', document.currentScript.src);
+  var themeLink = document.createElement('link');themeLink.rel='stylesheet';themeLink.href=new URL('space.css',themeBase).href;document.head.appendChild(themeLink);
   var SUITS = [
     { id: "S", symbol: "\u2660", color: "black", name: "spades" },
     { id: "H", symbol: "\u2665", color: "red", name: "hearts" },
@@ -103,6 +105,13 @@
     C: '<circle cx="12" cy="7.6" r="4.3"></circle><circle cx="7.2" cy="13.4" r="4.3"></circle><circle cx="16.8" cy="13.4" r="4.3"></circle><path d="M10.4 16.2h3.2l-.7 6.2h-1.8z"></path>'
   };
 
+  var SPACE_SUIT = {
+ H:'<path d="M12 21L3 12V7L7 3H10L12 6L14 3H17L21 7V12Z"/><path d="M6 10H9L11 7L13 14L15 10H19" fill="none" stroke="#f8eedb" stroke-width="1.3"/>',
+ S:'<path d="M12 2L3 13V17L6 20H9L12 17L15 20H18L21 17V13Z"/><path d="M10 17H14L15 23H9Z"/><path d="M12 6V14M8 13L12 9L16 13" fill="none" stroke="#f8eedb" stroke-width="1.2"/>',
+ D:'<path d="M12 1L22 12L12 23L2 12Z"/><path d="M12 5L18 12L12 19L6 12Z M12 5V19 M6 12H18" fill="none" stroke="#f8eedb" stroke-width="1.1"/>',
+ C:'<path d="M10 13H14L15 23H9Z"/><circle cx="12" cy="6" r="4.5"/><circle cx="6" cy="13" r="4.5"/><circle cx="18" cy="13" r="4.5"/><path d="M12 6V14L6 13M12 14L18 13" fill="none" stroke="#f8eedb" stroke-width="1.3"/><circle cx="12" cy="6" r="1" fill="#f8eedb"/><circle cx="6" cy="13" r="1" fill="#f8eedb"/><circle cx="18" cy="13" r="1" fill="#f8eedb"/>'
+  };
+  function spaceSuitSVG(suit){return artSvg('0 0 24 24',SPACE_SUIT[suit],'sc-space-symbol');}
   var ACE_FACE = {
     H: '<circle cx="9.2" cy="11" r="1.15" fill="#fffaf3"></circle><circle cx="14.8" cy="11" r="1.15" fill="#fffaf3"></circle><path d="M9.4 14.1Q12 16.2 14.6 14.1" fill="none" stroke="#fffaf3" stroke-width="1.1" stroke-linecap="round"></path>',
     D: '<circle cx="10" cy="11.2" r="1.15" fill="#fffaf3"></circle><circle cx="14" cy="11.2" r="1.15" fill="#fffaf3"></circle><path d="M10 14.4Q12 16.2 14 14.4" fill="none" stroke="#fffaf3" stroke-width="1.1" stroke-linecap="round"></path>',
@@ -126,7 +135,7 @@
     var spin = flip ? " rotate(180)" : "";
     var face = faced ? (ACE_FACE[suit] || "") : "";
     return '<g fill="currentColor" transform="translate(' + cx + " " + cy + ") scale(" + (size / 24) + ")" + spin + ' translate(-12 -12)">' +
-      SUIT_MARK[suit] + face + "</g>";
+      '<g class="sc-classic-suit">'+SUIT_MARK[suit]+face+'</g><g class="sc-orbital-suit">'+SPACE_SUIT[suit]+'</g></g>';
   }
 
   function starField() {
@@ -454,6 +463,8 @@
     el.style.overflow = "hidden";
 
     var root = document.createElement("div");
+    root.style.setProperty('--space-scene','url("'+new URL('solitary-orbit-background.png',themeBase).href+'")');
+    root.style.setProperty('--space-courts','url("'+new URL('space-courts.png',themeBase).href+'")');
     root.className = "sc-root";
     root.tabIndex = 0;
     root.setAttribute("role", "application");
@@ -493,6 +504,12 @@
           '<button type="button" data-control="credits-close">Close</button>' +
         "</div></div>";
 
+    var themeSelect=document.createElement('select');themeSelect.className='sc-theme-picker';themeSelect.setAttribute('aria-label','Table theme');
+    themeSelect.innerHTML='<option value="space">Solitary Orbit</option><option value="classic">Cardio for Introverts</option>';
+    var themeLabel=document.createElement('label');themeLabel.className='sc-theme-label';themeLabel.append('Theme ',themeSelect);root.querySelector('.sc-actions').append(themeLabel);
+    function applyTheme(value){root.dataset.theme=value;themeSelect.value=value;root.querySelector('.sc-title').textContent=value==='space'?'Solitary Orbit':'Solitaire: Cardio for Introverts';root.querySelector('.sc-rule').textContent=value==='space'?'In space, nobody can ask you to socialize.':'Klondike. Draw 3. Build down in alternating colours.';try{localStorage.setItem('solitaire-table-theme',value);}catch{}}
+    themeSelect.addEventListener('change',function(){applyTheme(themeSelect.value);fitCards();});
+    var initialTheme='space';try{initialTheme=localStorage.getItem('solitaire-table-theme')||'space';}catch{}applyTheme(initialTheme==='classic'?'classic':'space');
     var topRow = root.querySelector("[data-row=top]");
     var tabRow = root.querySelector("[data-row=tab]");
     var banner = root.querySelector("[data-banner]");
@@ -1280,9 +1297,9 @@
       }
       var name = esc(card.label) + " of " + card.name;
       return "<div" + attrs + ' aria-label="' + name + '" title="' + name + '">' +
-        faceArt(card) +
-        '<span class="sc-corner" aria-hidden="true"><b>' + esc(card.label) + "</b><i>" + card.symbol + "</i></span>" +
-        '<span class="sc-corner sc-br" aria-hidden="true"><b>' + esc(card.label) + "</b><i>" + card.symbol + "</i></span></div>";
+        faceArt(card) + (card.rank >= 10 ? '<span class="sc-space-court" aria-hidden="true" style="background-position:' + ((card.rank-10)*50) + '% 0"></span>' : '') +
+        '<span class="sc-corner" aria-hidden="true"><b>' + esc(card.label) + "</b><i>" + '<span class="sc-standard-symbol">'+card.symbol+'</span>'+spaceSuitSVG(card.suit) + "</i></span>" +
+        '<span class="sc-corner sc-br" aria-hidden="true"><b>' + esc(card.label) + "</b><i>" + '<span class="sc-standard-symbol">'+card.symbol+'</span>'+spaceSuitSVG(card.suit) + "</i></span></div>";
     }
 
     function classesFor(zone, pile, index, cardCount) {
@@ -1738,3 +1755,4 @@
     mount(host);
   }
 })();
+
